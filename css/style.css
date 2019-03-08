@@ -174,3 +174,19 @@ hp-learn.match img{
     margin-top: 5%;
     margin-right:  14%;
 }
+
+#tfo hp-title{
+     opacity: 0;
+     animation-name:  tfo;
+     animation-duration: 2s;
+}
+
+@keyframes tfo{
+    from{
+        opacity: 1.0;        
+    }
+
+    to{
+        opacity: 0;
+    }
+}
