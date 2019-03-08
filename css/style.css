@@ -167,7 +167,17 @@ hp-learn img{
 }
 
 hp-learn-no, hp-learn-yes{
-    display: none;
+    visibility: hidden;
+}
+
+.learn-yes hp-learn-yes{
+    visibility: visible;
+    color: #0f0;
+}
+
+.learn-no hp-learn-no{
+    visibility: visible;
+    color: #f00;
 }
 
 hp-learn.match img{
