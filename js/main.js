@@ -55,7 +55,9 @@ function handelAnimationEnd(e) {
 function setLearImage(imageName) {
     var img = document.querySelector("hp-slide.active hp-learn img");
 
-    img.src = "./images/" + imageName + ".svg";
+    if (img) {
+        img.src = "./images/" + imageName + ".svg";
+    }
 }
 
 var shapes = ["circle", "diamond", "square", "triangle"];
