@@ -1,5 +1,8 @@
 window.addEventListener("DOMContentLoaded", function (e) {
-    document.querySelector("hp-presentation").onclick = handelPresentationClick;
+    var presentation = document.querySelector("hp-presentation");
+
+    presentation.onclick = handelPresentationClick;
+    presentation.addEventListener("animationend", handelAnimationEnd, false);
 });
 
 function handelPresentationClick(e) {
@@ -15,12 +18,24 @@ function handelPresentationClick(e) {
         current.classList.remove("active");
         next.classList.add("active");
 
-        var aa = parseInt(next.getAttribute('data-autoadfvance'));
+        var aa = parseInt(next.getAttribute('data-autoadvance'));
 
         if (!isNaN(aa)) {
             setTimeout(function (e) {
                 handelPresentationClick(e);
             }, aa);
         }
+    }
+}
+
+
+
+function handelAnimationEnd(e) {
+    var slide = e.target.closest("hp-slide");
+
+    var aa = slide.getAttribute("data-autoadvance");
+
+    if (aa == "animationend" && slide.classList.contains("active")) {
+        handelPresentationClick(e);
     }
 }
