@@ -66,7 +66,7 @@
                     <hp-title>you know?</hp-title>
             </hp-slide>
 
-            <hp-slide>
+            <hp-slide data-autoadvance="1500">
                     <hp-title>Answer: you</hp-title>
                     <hp-learn>
                         <hp-learn-no>no</hp-learn-no>
@@ -76,6 +76,15 @@
                     <hp-title>learned.</hp-title>
             </hp-slide>
 
+            <hp-slide data-onshow=runLearningSequence>
+                    <hp-title>Answer: you</hp-title>
+                    <hp-learn>
+                        <hp-learn-no>no</hp-learn-no>
+                        <img class="chosen" src="./images/circle.svg">
+                        <hp-learn-yes>yes</hp-learn-yes>
+                    </hp-learn>
+                    <hp-title>learned.</hp-title>
+            </hp-slide>
 
         </hp-presentation>
     </hp-content>

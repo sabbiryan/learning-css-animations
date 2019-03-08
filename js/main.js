@@ -30,6 +30,12 @@ function handelPresentationClick(e) {
                 handelPresentationClick(e);
             }, aa);
         }
+
+
+        var osa = next.getAttribute("data-onshow");
+        if (osa) {
+            window[osa]();
+        }
     }
 }
 
@@ -43,4 +49,9 @@ function handelAnimationEnd(e) {
     if (aa == "animationend" && slide.classList.contains("active")) {
         handelPresentationClick(e);
     }
+}
+
+
+function runLearningSequence() {
+    console.log("in runLearningSequence");
 }
