@@ -1,24 +1,44 @@
 <html>
-    <head>
-        <meta charset="utf-8">
 
-        <title>[Site Name]: Home</title>
-        <meta name="description" content="[Site Description]">
-        <meta name="author" content="[Author]">
+<head>
+    <meta charset="utf-8">
 
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
+    <title>[Site Name]: Home</title>
+    <meta name="description" content="[Site Description]">
+    <meta name="author" content="[Author]">
 
-    <body>
-        <hp-content>
-            <hp-presentation>
-                <hp-slide>
-                    <hp-title>slide shows goes here</hp-title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <hp-content>
+        <hp-presentation>
+            <hp-slide class="active">
+                <hp-title>Which shape</hp-title>
+                <hp-chooser>
+                    <img src="./images/triangle.svg">
+                    <img src="./images/circle.svg">
+                    <img src="./images/diamond.svg">
+                    <img src="./images/square.svg">
+                </hp-chooser>
+                <hp-title>doesn't belong?</hp-title>
+            </hp-slide>
+
+            <hp-slide>
+                    <hp-title>Which shape</hp-title>
+                    <hp-chooser>
+                        <img src="./images/triangle.svg">
+                        <img src="./images/circle.svg">
+                        <img src="./images/diamond.svg">
+                        <img src="./images/square.svg">
+                    </hp-chooser>
+                    <hp-title>doesn't belong?</hp-title>
                 </hp-slide>
-            </hp-presentation>
-        </hp-content>
 
-        <script src="./js//main.js"></script>
-    </body>
+        </hp-presentation>
+    </hp-content>
+
+    <script src="./js//main.js"></script>
+</body>
 
 </html>

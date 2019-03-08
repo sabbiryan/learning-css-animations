@@ -6,7 +6,7 @@ html, body{
 
 hp-content{
     display: flex;
-    background-color: #f00;
+    background-color: #fff;
 
     width: 100vw;
     height: 100vh;
@@ -21,14 +21,47 @@ hp-presentation{
 
     width: 80vmin;
     height: 80vmin;
+
+    border: .2em solid #000;
+    border-radius: 1em;
+}
+
+hp-presentation>hp-slide{
+    display: none;
+}
+
+hp-presentation>hp-slide.active{
+    display: inline-block;
 }
 
 hp-slide{
     display: inline-block;
-    background-color: #0f0;
+    background-color: #fff;
 
     width: 80%;
     height: 80%;
 
     margin: 10%;
+
+    font-size: 8vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+hp-chooser{
+    display: flex;
+
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap:  nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hp-chooser * {
+    max-width: 20%;
+
+    margin: 5% 2.5%;
 }
